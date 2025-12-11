@@ -1,0 +1,116 @@
+:root {
+  --primary-color: #000000;
+  --secondary-color: #333333;
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --border-color: #000000;
+}
+
+body {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.app-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 15px 0;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
+}
+
+.inline-icon {
+  color: var(--primary-color);
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1px solid var(--border-color);
+  background: white;
+  color: black;
+  border-radius: 0;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: #f0f0f0;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #ddd;
+}
+
+.btn-primary {
+  background-color: black;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #333;
+}
+
+.btn-secondary {
+  background-color: white;
+  color: black;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.viz-container {
+  background: white;
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+}
+
+.metrics-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.loading {
+  color: var(--secondary-color);
+  font-style: italic;
+}
